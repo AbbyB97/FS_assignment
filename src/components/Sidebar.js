@@ -1,11 +1,12 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 const Sidebar = () => {
   return (
-    
     <div>
-        Sidebar
+      <Button variant="mystyle" size="xxl">
+        flat button
+      </Button>
     </div>
-    
   );
 };
 

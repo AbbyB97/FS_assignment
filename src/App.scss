@@ -1,0 +1,109 @@
+@import "./mediaquery.scss";
+
+.btn-mystyle {
+  background-color: purple;
+  color: white;
+}
+.nav-logo {
+  float: left !important;
+  margin-top: -15px !important;
+}
+// .container, .container-lg, .container-md, .container-sm, .container-xl{
+//   max-width: 95vw;
+// }
+
+.nav-item {
+  width: fit-content;
+  min-width: 12vw;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-style: 1px;
+  @include bp("phone") {
+    font-size: 2.4vw;
+  }
+
+  @include bp("tablet") {
+    font-size: 1.8vw;
+  }
+
+  @include bp("laptop") {
+    font-size: 1.4vw;
+  }
+
+  @include bp("television") {
+    font-size: 1vw;
+  }
+
+  text-align: center;
+}
+
+.nav-pills {
+  flex-direction: row;
+  .nav-link {
+    border-radius: 0;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+  }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #3b3b3b;
+}
+.navbar-nav {
+  // @include bp("phone") {
+  //   background-color: yellow;
+  // }
+  // @include bp("tablet") {
+  //   background-color: green;
+  // }
+  // @include bp("laptop") {
+  //   background-color: pink;
+  // }
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+  outline: 0;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  @include bp("phone") {
+    max-width: 95vw;
+  }
+
+  @include bp("tablet") {
+    max-width: 85vw;
+  }
+
+  @include bp("laptop") {
+    max-width: 70vw;
+  }
+}
+
+.img-logo {
+  @include bp("phone") {
+    width: auto;
+  }
+  @include bp("tablet") {
+    width: 24vw;
+  }
+  @include bp("laptop") {
+    width: 13vw;
+  }
+}
