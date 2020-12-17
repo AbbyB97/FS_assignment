@@ -2,7 +2,7 @@ import React from "react";
 import faker, { fake } from "faker";
 import { Row, Col } from "react-bootstrap";
 const MessageList = () => {
-  console.log("img 0-", faker.internet.avatar());
+  console.log("4/2", 4/2);
   return (
     // <div
     //   className="container-fluid pt-1 pb-1 mt-4 "
@@ -52,17 +52,24 @@ const MessageList = () => {
     //     </Col>
     //   </Row>
     // </div>
-    <div className="message-list-container mt-5">
-      <div style={{ position: "relative" }}>
+    <div className="message-list-container mt-5">{renderList()}</div>
+  );
+};
+
+const renderList = () => {
+  const returnObj = [];
+  for (var i = 0; i < 7; i++) {
+    const objRow = (
+      <div key={faker.date.recent()+faker.finance.bitcoinAddress()} style={{ position: "relative" }}>
         <div
-          style={{ backgroundColor: "#e8f5f9" }}
+          style={{ backgroundColor: `${i===0 || i===2? "#e8f5f9":"#f9f8f8"}` }}
           className="p-0 card border card-style"
         >
           <div className="user-column ml-2">
             <img
               alt="avatar"
               src={`https://i.pravatar.cc/150?img=1${Math.floor(
-                Math.random() * 11
+                Math.random() * 9
               )}`}
             />
             <p style={{ color: "black", fontWeight: "bold" }}>
@@ -107,8 +114,12 @@ const MessageList = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
+    );
+
+    returnObj.push(objRow);
+  }
+
+  return returnObj;
 };
 
 export default MessageList;

@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import Logo from "./widgets/Logo";
 const Footer = () => {
   return (
-    <div class="footer-div">
+    <div className="footer-div">
       <Row md={12} style={{ justifyContent: "center", paddingTop: "0.5rem" }}>
         <Logo />
       </Row>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <div style={logoDiv}>
                   <i
                     style={{ color: "#375599" }}
-                    class="fab fa-facebook-f fa-2x"
+                    className="fab fa-facebook-f fa-2x"
                   ></i>
                 </div>
               </Col>
@@ -80,7 +80,7 @@ const Footer = () => {
                 <div style={logoDiv}>
                   <i
                     style={{ color: "#1d9cec" }}
-                    class="fab fa-twitter  fa-2x"
+                    className="fab fa-twitter  fa-2x"
                   ></i>
                 </div>
               </Col>
@@ -88,7 +88,7 @@ const Footer = () => {
                 <div style={logoDiv}>
                   <i
                     style={{ color: "#f60100" }}
-                    class="fab fa-youtube fa-2x"
+                    className="fab fa-youtube fa-2x"
                   ></i>
                 </div>
               </Col>
@@ -96,7 +96,7 @@ const Footer = () => {
                 <div style={logoDiv}>
                   <i
                     style={{ color: "#761fb2" }}
-                    class="fab fa-instagram fa-2x"
+                    className="fab fa-instagram fa-2x"
                   ></i>
                 </div>
               </Col>

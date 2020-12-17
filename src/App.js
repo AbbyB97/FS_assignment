@@ -20,7 +20,7 @@ const App = () => {
             <Sidebar />
           </Col>
           <Col
-            style={{ height: "800px", backgroundColor: "pink" }}
+            style={{  backgroundColor: "pink" }}
             md={3}
             lg={4}
             xl={4}

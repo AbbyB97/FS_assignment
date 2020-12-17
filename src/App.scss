@@ -173,6 +173,8 @@ hr {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  height: 650px;
+  overflow: scroll;
   .card-style {
     width: 90%;
     margin: auto;
