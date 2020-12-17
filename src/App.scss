@@ -157,3 +157,15 @@ hr{
   border-top: 6px solid #cfcfd0;
 }
 }
+
+// .search-bar{
+//   @include bp("phone") {
+//     width: 80vw;
+//   }
+//   @include bp("tablet") {
+//     width: 20vw;
+//   }
+//   @include bp("laptop") {
+//     width: 30vw;
+//   }
+// }
