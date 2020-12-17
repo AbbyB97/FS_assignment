@@ -4,7 +4,7 @@ import Logo from "./widgets/Logo";
 
 const Header = () => {
   return (
-    <div style={{margin:"1"}}>
+    <div style={{margin:"1.5rem",marginTop:"0",marginBottom:"0"}}>
       <Navbar collapseOnSelect expand={false} bg="white" variant="light">
         <Navbar.Brand href="#home">
           <Logo/>

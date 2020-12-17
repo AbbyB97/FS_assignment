@@ -10,6 +10,7 @@ const App = () => {
   return (
     <div>
       <Header />
+      <hr/>
       <Searchbar />
       <Sidebar />
       <Filter />
