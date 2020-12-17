@@ -53,26 +53,58 @@ const MessageList = () => {
     //   </Row>
     // </div>
     <div className="message-list-container mt-5">
-      <div style={{backgroundColor:"#e8f5f9"}} className="p-0 card border card-style">
-        <div className="user-column ml-2">
-          <img
-            alt="avatar"
-            src={`https://i.pravatar.cc/150?img=1${Math.floor(
-              Math.random() * 11
-            )}`}
-          />
-          <p style={{ color: "black", fontWeight: "bold" }}>
-            {faker.name.firstName()}
+      <div style={{ position: "relative" }}>
+        <div
+          style={{ backgroundColor: "#e8f5f9" }}
+          className="p-0 card border card-style"
+        >
+          <div className="user-column ml-2">
+            <img
+              alt="avatar"
+              src={`https://i.pravatar.cc/150?img=1${Math.floor(
+                Math.random() * 11
+              )}`}
+            />
+            <p style={{ color: "black", fontWeight: "bold" }}>
+              {faker.name.firstName()}
+            </p>
+            <p style={{ color: "gray" }}>{`@${faker.name.lastName()}`}</p>
+          </div>
+          <div className="message-column">
+            <h4>{faker.lorem.word()}</h4>
+            <p>{faker.lorem.sentence()}</p>
+          </div>
+          <div className="time-id-column">
+            <div style={{ maxWidth: "max-content" }}>
+              <p
+                className="px-1"
+                style={{
+                  borderRadius: "5px",
+                  color: "#6B6565",
+                  background: "#efebeb",
+                }}
+              >
+                Chat ID: 2131233
+              </p>
+            </div>
+            <p style={{ textAlign: "right", padding: "10px", color: "green" }}>
+              11:00 a.m
+            </p>
+          </div>
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            bottom: "0.5vw",
+            right: "1.2vw",
+            borderRadius: "1.5rem",
+            backgroundColor: "green",
+            width: "max-content",
+          }}
+        >
+          <p className="px-2" style={{ color: "white", fontSize: "1.1rem" }}>
+            3
           </p>
-          <p style={{ color: "gray" }}>{`@${faker.name.lastName()}`}</p>
-        </div>
-        <div className="message-column">
-          <h4>{faker.lorem.word()}</h4>
-          <p>{faker.lorem.sentence()}</p>
-        </div>
-        <div className="time-id-column">
-          <div style={{maxWidth:"max-content"}}><p  className="px-1" style={{borderRadius:"5px",color:"#6B6565",background:"#efebeb"}}>Chat ID: 2131233</p></div>
-          <p style={{textAlign:"right",padding:"10px",color:"green"}}>11:00 a.m</p>
         </div>
       </div>
     </div>
