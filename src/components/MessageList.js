@@ -71,7 +71,7 @@ const MessageList = () => {
           <p>{faker.lorem.sentence()}</p>
         </div>
         <div className="time-id-column">
-          <p  className="px-1" style={{borderRadius:"5px",color:"#6B6565",background:"#efebeb"}}>Chat ID: 2131233</p>
+          <div style={{maxWidth:"max-content"}}><p  className="px-1" style={{borderRadius:"5px",color:"#6B6565",background:"#efebeb"}}>Chat ID: 2131233</p></div>
           <p style={{textAlign:"right",padding:"10px",color:"green"}}>11:00 a.m</p>
         </div>
       </div>
