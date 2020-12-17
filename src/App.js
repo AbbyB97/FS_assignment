@@ -23,12 +23,12 @@ const App = () => {
             style={{ height: "800px", backgroundColor: "pink" }}
             md={3}
             lg={4}
-            xl={5}
+            xl={3}
           >
             <Searchbar />
             <MessageList />
           </Col>
-          <Col style={{ backgroundColor: "green" }} md={5} lg={5} xl={5}>
+          <Col style={{ backgroundColor: "green" }} md={5} lg={5} xl={7}>
             <Row>
               <Button
                 variant="warning"
