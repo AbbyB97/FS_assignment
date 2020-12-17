@@ -1,5 +1,5 @@
 @import "./mediaquery.scss";
-body{
+body {
   overflow-x: hidden;
 }
 .btn-mystyle {
@@ -146,16 +146,16 @@ hr {
   }
 }
 
-.footer-div{
-background-color: #1b1818;
-hr{
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 3px;
-  border-top: 6px solid #cfcfd0;
-}
+.footer-div {
+  background-color: #1b1818;
+  hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    border-top: 6px solid #cfcfd0;
+  }
 }
 
 // .search-bar{
@@ -169,3 +169,61 @@ hr{
 //     width: 30vw;
 //   }
 // }
+.message-list-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  .card-style {
+    width: 85%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    display: flex;
+    
+    @include bp("tablet") {
+      flex-direction: column;
+    }
+    @include bp("laptop") {
+      flex-direction: row;
+    }
+    justify-content: space-between;
+    border-radius: 8px;
+    .user-column {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items:center;
+      img {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 5rem;
+      }
+      p {
+        margin: 0;
+        font-size: small;
+      }
+    }
+    .message-column{
+      display: flex;
+
+          
+    @include bp("tablet") {
+      width: 100%;
+    }
+    @include bp("laptop") {
+      width: 50%;
+    }
+      flex-direction: column;
+      justify-content: center;
+    }
+    .time-id-column{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
