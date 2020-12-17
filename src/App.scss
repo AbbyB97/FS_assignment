@@ -131,6 +131,7 @@ hr {
     // margin-top: 3px;
     // margin-left: 3px;
     // padding-top: 3px;
+    color: white;
     @include bp("phone") {
       font-size: small;
     }

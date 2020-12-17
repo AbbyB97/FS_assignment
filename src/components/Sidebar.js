@@ -61,7 +61,7 @@ const Sidebar = () => {
             <InboxSvg fill="#3b3b3b"  />
           </Col>
           <Col>
-            <p className="my-auto">Inbox </p>
+            <p style={{color:"black"}} className="my-auto">Inbox </p>
           </Col>
           <Col>
             <i style={{ color: "#ffbb00" }} className="fas fa-circle"></i>
