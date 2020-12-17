@@ -10,94 +10,101 @@ import { ReactComponent as SubscriptionIco } from "../icons/subscription_svg.svg
 import { ReactComponent as InboxSvg } from "../icons/inb_svg.svg";
 
 const Sidebar = () => {
-  const MenuIcon = (props) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill={props.fill}
-      className={props.class}
-    ></svg>
-  );
+  const sideBarClick = (item) => {
+    console.log(item);
+    if (item === 4) {
+      console.log("inbox show");
+    } else {
+      alert("functionality will be added soon");
+    }
+  };
 
   return (
-    <Row>
+    <Row style={{backgroundColor:"#914A9C"}} className="mr-5 pt-5 pb-5"  >
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(1)} className="side-bar-item">
           <Col md={2} xs={1}>
             <ProfileIco fill="white" stroke="white" />
           </Col>
           <Col>
-            <p>Employer Profile</p>
+            <p className="my-auto">Employer Profile</p>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(2)} className="side-bar-item">
           <Col md={2} xs={1}>
             <CarIco fill="white" />
           </Col>
           <Col>
-            <p>Onboard Vehicles</p>
+            <p className="my-auto">Onboard Vehicles</p>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(3)} className="side-bar-item">
           <Col md={2} xs={1}>
             <SearchIco stroke="white" />
           </Col>
           <Col>
-            <p>Search & Hire Drivers</p>
+            <p className="my-auto">Search & Hire Drivers</p>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row
+          onClick={() => sideBarClick(4)}
+          style={{ backgroundColor: "white" }}
+          className="side-bar-item"
+        >
           <Col md={2} xs={1}>
-            {/* <img alt="Organization icon" style={{fill:"#FFFFF"}} src={inbox_svg} /> */}
-            <InboxSvg fill="white" stroke="white" />
+            <InboxSvg fill="#3b3b3b"  />
           </Col>
           <Col>
-            <p>Inbox </p>
+            <p className="my-auto">Inbox </p>
+          </Col>
+          <Col>
+            <i style={{ color: "#ffbb00" }} className="fas fa-circle"></i>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(5)} className="side-bar-item">
           <Col md={2} xs={1}>
             <RecruitmentIco fill="white" />
           </Col>
           <Col>
-            <p>Recruitment</p>
+            <p className="my-auto">Recruitment</p>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(6)} className="side-bar-item">
           <Col md={2} xs={1}>
             <OrganizationIco fill="white" />
           </Col>
           <Col>
-            <p>My Subscription</p>
+            <p className="my-auto">My Subscription</p>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(7)} className="side-bar-item">
           <Col md={2} xs={1}>
             <RateIco fill="white" />
           </Col>
           <Col>
-            <p>My Organizations</p>
+            <p className="my-auto">My Organizations</p>
           </Col>
         </Row>
       </Col>
       <Col md={12} sm={4} xs={6}>
-        <Row>
+        <Row onClick={() => sideBarClick(8)} className="side-bar-item">
           <Col md={2} xs={1}>
             <SubscriptionIco fill="white" />
           </Col>
           <Col>
-            <p>My Organizations</p>
+            <p className="my-auto">My Organizations</p>
           </Col>
         </Row>
       </Col>

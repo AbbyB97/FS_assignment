@@ -114,3 +114,32 @@ hr {
   border: 0;
   border-top: 32px solid #3b3b3b;
 }
+.side-bar {
+  background-color: "brown";
+  width: "60%";
+}
+
+.side-bar-item {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  border-radius: 5px;
+
+  cursor: pointer;
+  p {
+    // margin-top: 3px;
+    // margin-left: 3px;
+    // padding-top: 3px;
+    @include bp("phone") {
+      font-size: small;
+    }
+    @include bp("tablet") {
+      font-size: medium;
+    }
+    // @include bp("laptop") {
+    //   font-size: .8rem;
+    // }
+  }
+}
+
