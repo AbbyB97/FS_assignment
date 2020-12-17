@@ -20,7 +20,7 @@ const Sidebar = () => {
   };
 
   return (
-    <Row style={{backgroundColor:"#914A9C"}} className="mr-5 pt-5 pb-5"  >
+    <Row style={{backgroundColor:"#914A9C"}} className="pt-5 pb-5"  >
       <Col md={12} sm={4} xs={6}>
         <Row onClick={() => sideBarClick(1)} className="side-bar-item">
           <Col md={2} xs={1}>

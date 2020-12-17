@@ -1,5 +1,7 @@
 @import "./mediaquery.scss";
-
+body{
+  overflow-x: hidden;
+}
 .btn-mystyle {
   background-color: purple;
   color: white;
@@ -144,3 +146,14 @@ hr {
   }
 }
 
+.footer-div{
+background-color: #3b3b3b;
+hr{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  border-top: 6px solid #cfcfd0;
+}
+}

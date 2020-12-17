@@ -17,15 +17,15 @@ const App = () => {
       <hr />
       <div className="container-fluid">
         <Row>
-          <Col style={{backgroundColor:"blue"}} md={4} lg={2}>
+          <Col style={{backgroundColor:"blue"}} md={4} lg={3} xl={2}>
             <Sidebar />
           </Col>
-          <Col style={{ backgroundColor: "pink" }} md={3} lg={4}>
+          <Col style={{ height:"800px", backgroundColor: "pink" }} md={3} lg={4} xl={5}>
             <Searchbar />
             <Filter />
             <MessageList />
           </Col>
-          <Col style={{ backgroundColor: "yellow" }} md={5} lg={6}>
+          <Col style={{ backgroundColor: "yellow" }} md={5} lg={5} xl={5}>
             <Chatbox />
           </Col>
         </Row>
