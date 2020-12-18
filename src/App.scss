@@ -301,7 +301,8 @@ hr {
     display: none;
 
   }
-  @include bp("tablet") {
+
+  @include bp("laptop") {
     visibility: visible;
     display: block;
   }
