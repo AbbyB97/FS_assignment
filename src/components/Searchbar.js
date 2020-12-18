@@ -94,7 +94,7 @@ const Searchbar = () => {
         <Main>
           <DropDownContainer>
             <DropDownHeader onClick={toggling}>
-              <FilterIco />
+              <FilterIco style={{cursor:"pointer"}} />
             </DropDownHeader>
             {isOpen && (
               <DropDownListContainer>

@@ -175,6 +175,7 @@ hr {
   flex-direction: column;
   height: 650px;
   overflow: scroll;
+  overflow-x: hidden;
   .card-style {
     width: 90%;
     margin: auto;

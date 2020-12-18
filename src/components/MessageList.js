@@ -52,7 +52,7 @@ const MessageList = () => {
     //     </Col>
     //   </Row>
     // </div>
-    <div className="message-list-container mt-5">{renderList()}</div>
+    <div className="message-list-container mt-2">{renderList()}</div>
   );
 };
 
@@ -62,7 +62,7 @@ const renderList = () => {
     const objRow = (
       <div key={faker.date.recent()+faker.finance.bitcoinAddress()} style={{ position: "relative" }}>
         <div
-          style={{ backgroundColor: `${i===0 || i===2? "#e8f5f9":"#f9f8f8"}` }}
+          style={{ backgroundColor: `${i===0 || i===2? "#e8f5f9":"#f9f8f8"}`,cursor:"pointer" }}
           className="p-0 card border card-style"
         >
           <div className="user-column ml-2">
