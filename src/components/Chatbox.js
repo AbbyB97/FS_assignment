@@ -118,7 +118,7 @@ const Chatbox = () => {
             style={{
               color: "white",
               fontSize: "1.2rem",
-
+              borderRadius:"5px",
               minWidth: "max-content",
               marginTop: "1rem",
               marginLeft: "0",
