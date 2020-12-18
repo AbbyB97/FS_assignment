@@ -25,7 +25,7 @@ const DropDownListContainer = styled("div")`
   position: absolute;
   z-index: 100;
   width: 19rem;
-  right: 170px;
+  right: 70%;
   top: 20px;
   border-style: solid;
   background: #ffffff;
@@ -116,13 +116,16 @@ const Searchbar = () => {
                     title="Dropdown right"
                     id="dropdown-menu-align-right"
                   >
-                    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-                    <Dropdown.Item eventKey="3">
+                    <Dropdown.Item eventKey="1">Read messages</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">Unread messages</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">Opened but not responded</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">Ongoing discussion</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">Ended discussion</Dropdown.Item>
+                    {/* <Dropdown.Item eventKey="3">
                       Something else here
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item> */}
                   </DropdownButton>
 
                   <DropdownButton
@@ -131,13 +134,17 @@ const Searchbar = () => {
                     title="Dropdown right"
                     id="dropdown-menu-align-right"
                   >
-                    <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-                    <Dropdown.Item eventKey="3">
+                    <Dropdown.Item eventKey="1">Last hour</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">12 hrs ago</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">Today</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">This week</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">This month</Dropdown.Item>
+                    <Dropdown.Item eventKey="2">This year</Dropdown.Item>
+                    {/* <Dropdown.Item eventKey="3">
                       Something else here
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item> */}
                   </DropdownButton>
                   <Button
                     variant="warning"
@@ -146,8 +153,7 @@ const Searchbar = () => {
                       fontSize: "1.3rem",
                       marginTop: "2rem",
                       marginBottom: "2rem",
-                      marginLeft: "2rem",
-                      marginRight: "3rem",
+                      marginLeft: "25%",
                     }}
                   >
                     Apply filters

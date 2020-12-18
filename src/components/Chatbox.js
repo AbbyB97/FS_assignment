@@ -37,11 +37,40 @@ const CardHeader = styled("div")`
 const MessagesContainer = styled("div")`
   background-color: pink;
   width: 100%;
-  padding-right: 20px;
-  height: 800px;
-
+  height: 600px;
+  margin-top: 1rem;
   overflow: scroll;
   overflow-x: hidden;
+
+  .chat-id {
+    background-color: #efebeb;
+    width: max-content;
+  }
+
+  .sender {
+    p {
+      margin-top: 1rem;
+      background-color: #ecf2fa;
+      margin-right: 40%;
+      margin-left: 1rem;
+    }
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  .reciever {
+    p {
+      margin-top: 1rem;
+      margin-right: 1rem;
+      background-color: #fcf2f7;
+      margin-left: 40%;
+    }
+    span {
+      margin-left: auto;
+      margin-right: 1rem;
+    }
+  }
 `;
 const InputContainer = styled("div")`
   width: 95%;
@@ -103,17 +132,24 @@ const Chatbox = () => {
         </div>
       </CardHeader>
       <MessagesContainer>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
-        <p>{faker.lorem.paragraphs()}</p>
+        <div className="chat-id px-3 ml-auto">
+          Chat Id : {faker.random.number()}
+        </div>
+        <div className="sender">
+          <p class="mb-1">{faker.lorem.paragraph()}</p>
+          <span>11:30 a.m.</span>
+        </div>
+        <div className="reciever">
+          <p>{faker.lorem.paragraph()}</p>
+
+          <div style={{ textAlign: "right" }}>
+            <span>11:30 a.m.</span>
+            <i class="fas fa-check-double mr-4"></i>
+            <span>
+              <i class="fas fa-trash"></i>
+            </span>
+          </div>
+        </div>
       </MessagesContainer>
       <InputContainer>
         <div className="container-fluid ">
@@ -134,18 +170,27 @@ const Chatbox = () => {
               background: "#f9f8f8",
               borderBottomLeftRadius: "15px",
               borderBottomRightRadius: "15px",
-              marginBottom:'5px',
-              marginTop:'5px',
+              marginBottom: "5px",
+              marginTop: "5px",
             }}
           >
             <Col md={2} xl={1} sm={1} className="my-auto">
-              <i style={{ color: "gray",cursor:"pointer" }} class="fas fa-paperclip fa-lg"></i>
+              <i
+                style={{ color: "gray", cursor: "pointer" }}
+                class="fas fa-paperclip fa-lg"
+              ></i>
             </Col>
             <Col md={2} xl={1} sm={1} className="my-auto">
-              <i style={{ color: "gray",cursor:"pointer" }} class="far fa-smile fa-lg"></i>
+              <i
+                style={{ color: "gray", cursor: "pointer" }}
+                class="far fa-smile fa-lg"
+              ></i>
             </Col>
             <Col md={2} xl={1} sm={1} className="my-auto">
-              <i style={{ color: "gray",cursor:"pointer" }} class="fas fa-microphone fa-lg"></i>
+              <i
+                style={{ color: "gray", cursor: "pointer" }}
+                class="fas fa-microphone fa-lg"
+              ></i>
             </Col>
             <Col md={{ span: 3, offset: 3 }} xl={{ span: 2, offset: 7 }} sm={1}>
               <button
