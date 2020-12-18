@@ -35,10 +35,8 @@ const CardHeader = styled("div")`
 `;
 
 const MessagesContainer = styled("div")`
-  background-color: pink;
   width: 100%;
   height: 600px;
-  margin-top: 1rem;
   overflow: scroll;
   overflow-x: hidden;
 
@@ -144,9 +142,9 @@ const Chatbox = () => {
 
           <div style={{ textAlign: "right" }}>
             <span>11:30 a.m.</span>
-            <i class="fas fa-check-double mr-4"></i>
+            <i style={{color:"#ffbb00"}} class="fas fa-check-double mr-4"></i>
             <span>
-              <i class="fas fa-trash"></i>
+              <i style={{color:"#d9d9d9"}} class="fas fa-trash"></i>
             </span>
           </div>
         </div>

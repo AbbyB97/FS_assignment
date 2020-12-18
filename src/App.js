@@ -16,11 +16,11 @@ const App = () => {
       <hr />
       <div className="container-fluid">
         <Row>
-          <Col style={{ backgroundColor: "blue" }} md={4} lg={3} xl={2}>
+          <Col style={{ backgroundColor: "#f5f5f5" }} md={4} lg={3} xl={2}>
             <Sidebar />
           </Col>
           <Col
-            style={{  backgroundColor: "pink" }}
+            style={{ backgroundColor:"#f5f5f5" }}
             md={3}
             lg={4}
             xl={4}
@@ -28,7 +28,7 @@ const App = () => {
             <Searchbar />
             <MessageList />
           </Col>
-          <Col style={{ backgroundColor: "green" }} md={5} lg={5} xl={6}>
+          <Col style={{ backgroundColor: "#f5f5f5" }} md={5} lg={5} xl={6}>
             <Row>
               <Button
                 variant="warning"
