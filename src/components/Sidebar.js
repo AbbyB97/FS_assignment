@@ -27,7 +27,7 @@ const Sidebar = () => {
             <ProfileIco fill="white" stroke="white" />
           </Col>
           <Col>
-            <p className="my-auto">Employer Profile</p>
+            <p className="my-auto">Employer Profile  <span className="my-auto"><i class="fas fa-angle-down ml-1"></i></span> </p>
           </Col>
         </Row>
       </Col>
