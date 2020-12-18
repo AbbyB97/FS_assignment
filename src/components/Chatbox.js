@@ -130,24 +130,11 @@ const Chatbox = () => {
         </div>
       </CardHeader>
       <MessagesContainer>
-        <div className="chat-id px-3 ml-auto">
+      <div className="chat-id px-3 ml-auto">
           Chat Id : {faker.random.number()}
         </div>
-        <div className="sender">
-          <p class="mb-1">{faker.lorem.paragraph()}</p>
-          <span>11:30 a.m.</span>
-        </div>
-        <div className="reciever">
-          <p>{faker.lorem.paragraph()}</p>
-
-          <div style={{ textAlign: "right" }}>
-            <span>11:30 a.m.</span>
-            <i style={{color:"#ffbb00"}} class="fas fa-check-double mr-4"></i>
-            <span>
-              <i style={{color:"#d9d9d9"}} class="fas fa-trash"></i>
-            </span>
-          </div>
-        </div>
+      {renderMessages()}
+        
       </MessagesContainer>
       <InputContainer>
         <div className="container-fluid ">
@@ -212,5 +199,35 @@ const Chatbox = () => {
     </MainCard>
   );
 };
+
+const renderMessages =() =>{
+  const returnObj = [];
+  for (var i = 0; i < 7; i++) {
+    const objRow = (
+      <>
+      <div className="sender">
+        <p class="mb-1">{faker.lorem.paragraph()}</p>
+        <span>11:30 a.m.</span>
+      </div>
+      <div className="reciever">
+        <p>{faker.lorem.paragraph()}</p>
+
+        <div style={{ textAlign: "right" }}>
+          <span>11:30 a.m.</span>
+          <i style={{color:"#ffbb00",cursor:"pointer"}} class="fas fa-check-double mr-4"></i>
+          <span>
+            {i===6?<i style={{color:"#d9d9d9",cursor:"pointer"}} class="fas fa-trash"></i>:null}
+          </span>
+        </div>
+      </div>
+      </>
+    );
+
+    returnObj.push(objRow);
+  }
+  return returnObj;
+  
+}
+
 
 export default Chatbox;
