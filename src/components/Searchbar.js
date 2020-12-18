@@ -100,7 +100,7 @@ const Searchbar = () => {
               <DropDownListContainer>
                 <DropDownList>
                   <DropDownListHeader>
-                    <p class="ml-5 pt-2">Header</p>
+                    <p className="ml-5 pt-2">Header</p>
                   </DropDownListHeader>
                   {/* {options.map((option) => (
                     <ListItem

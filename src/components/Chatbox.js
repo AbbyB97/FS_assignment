@@ -44,12 +44,10 @@ const MessagesContainer = styled("div")`
   overflow-x: hidden;
 `;
 const InputContainer = styled("div")`
-  background: lightblue;
-  width:95%;
-  margin:1rem;
+  width: 95%;
+  margin: 1rem;
   border: 2px solid #ffbb00;
-  border-radius: 5px;
-  
+  border-radius: 15px;
 `;
 
 const Chatbox = () => {
@@ -77,7 +75,7 @@ const Chatbox = () => {
           </p>
         </div>
         <div style={{ width: "60%" }} className="my-auto">
-          <p style={{fontSize:"1.5rem"}}>{faker.lorem.words()}</p>
+          <p style={{ fontSize: "1.5rem" }}>{faker.lorem.words()}</p>
         </div>
         <div className="my-auto">
           <Button
@@ -85,13 +83,13 @@ const Chatbox = () => {
               color: "white",
               fontSize: "1.2rem",
 
-              minWidth:"max-content",
+              minWidth: "max-content",
               marginTop: "1rem",
               marginLeft: "0",
               backgroundColor: "#6b6565",
             }}
           >
-            <span style={{ color: "#ffbb00" }} class="pr-3 h4">
+            <span style={{ color: "#ffbb00" }} className="pr-3 h4">
               i
             </span>
             Contact Info
@@ -99,8 +97,8 @@ const Chatbox = () => {
         </div>
         <div className="my-auto">
           <i
-            style={{ cursor: "pointer",fontSize:"1.4rem"}}
-            class="fas fa-ellipsis-v mr-1 pt-3"
+            style={{ cursor: "pointer", fontSize: "1.4rem" }}
+            className="fas fa-ellipsis-v mr-1 pt-3"
           ></i>
         </div>
       </CardHeader>
@@ -117,19 +115,56 @@ const Chatbox = () => {
         <p>{faker.lorem.paragraphs()}</p>
         <p>{faker.lorem.paragraphs()}</p>
       </MessagesContainer>
-      <InputContainer  >
-      <div class="container-fluid ">
-
-      <Row>
-      <textarea style={{resize:"none",border:"none",outline:"none",width:"100%"}}  rows="5"></textarea>
-      </Row>
-      <Row>
-        <Col md={2} xl={1}>sa1</Col>
-        <Col md={2} xl={1}>sa1</Col>
-        <Col md={2} xl={1}>sda</Col>
-        <Col md={{ span: 2, offset: 4 }} xl={{ span: 2, offset: 7 }} >sda1</Col>
-      </Row>
-      </div>
+      <InputContainer>
+        <div className="container-fluid ">
+          <Row>
+            <textarea
+              className="mx-3"
+              style={{
+                resize: "none",
+                border: "none",
+                outline: "none",
+                width: "97.5%",
+              }}
+              rows="5"
+            ></textarea>
+          </Row>
+          <Row
+            style={{
+              background: "#f9f8f8",
+              borderBottomLeftRadius: "15px",
+              borderBottomRightRadius: "15px",
+              marginBottom:'5px',
+              marginTop:'5px',
+            }}
+          >
+            <Col md={2} xl={1} sm={1} className="my-auto">
+              <i style={{ color: "gray",cursor:"pointer" }} class="fas fa-paperclip fa-lg"></i>
+            </Col>
+            <Col md={2} xl={1} sm={1} className="my-auto">
+              <i style={{ color: "gray",cursor:"pointer" }} class="far fa-smile fa-lg"></i>
+            </Col>
+            <Col md={2} xl={1} sm={1} className="my-auto">
+              <i style={{ color: "gray",cursor:"pointer" }} class="fas fa-microphone fa-lg"></i>
+            </Col>
+            <Col md={{ span: 3, offset: 3 }} xl={{ span: 2, offset: 7 }} sm={1}>
+              <button
+                style={{
+                  width: "5rem",
+                  background: "#ffbb00",
+                  width: "100%",
+                  borderRadius: "0.85rem",
+                }}
+                className="ui icon button"
+              >
+                <i
+                  style={{ color: "white" }}
+                  class="fas fa-paper-plane fa-lg"
+                ></i>
+              </button>
+            </Col>
+          </Row>
+        </div>
       </InputContainer>
     </MainCard>
   );
