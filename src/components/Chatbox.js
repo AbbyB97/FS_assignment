@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Row, Col, Button } from "react-bootstrap";
+
+import { ReactComponent as ItalicIcon } from "../icons/italic_i_svg.svg";
+
 import faker from "faker";
 
 const MainCard = styled("div")`
@@ -39,7 +42,6 @@ const MessagesContainer = styled("div")`
   height: 600px;
   overflow: scroll;
   overflow-x: hidden;
-
   .chat-id {
     background-color: #efebeb;
     width: max-content;
@@ -47,10 +49,12 @@ const MessagesContainer = styled("div")`
 
   .sender {
     p {
+      padding:1rem;
       margin-top: 1rem;
       background-color: #ecf2fa;
       margin-right: 40%;
       margin-left: 1rem;
+      border-radius:1rem;
     }
     span {
       margin-left: 1rem;
@@ -63,6 +67,9 @@ const MessagesContainer = styled("div")`
       margin-right: 1rem;
       background-color: #fcf2f7;
       margin-left: 40%;
+      border-radius:1rem;
+      padding:1rem;
+
     }
     span {
       margin-left: auto;
@@ -116,8 +123,8 @@ const Chatbox = () => {
               backgroundColor: "#6b6565",
             }}
           >
-            <span style={{ color: "#ffbb00" }} className="pr-3 h4">
-              i
+            <span style={{ color: "#ffbb00" ,margin:"0rem"}} className="pr-3 h4">
+            <ItalicIcon/>
             </span>
             Contact Info
           </Button>
@@ -162,19 +169,19 @@ const Chatbox = () => {
             <Col md={2} xl={1} sm={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
-                class="fas fa-paperclip fa-lg"
+                className="fas fa-paperclip fa-lg"
               ></i>
             </Col>
             <Col md={2} xl={1} sm={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
-                class="far fa-smile fa-lg"
+                className="far fa-smile fa-lg"
               ></i>
             </Col>
             <Col md={2} xl={1} sm={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
-                class="fas fa-microphone fa-lg"
+                className="fas fa-microphone fa-lg"
               ></i>
             </Col>
             <Col md={{ span: 3, offset: 3 }} xl={{ span: 2, offset: 7 }} sm={1}>
@@ -189,7 +196,7 @@ const Chatbox = () => {
               >
                 <i
                   style={{ color: "white" }}
-                  class="fas fa-paper-plane fa-lg"
+                  className="fas fa-paper-plane fa-lg"
                 ></i>
               </button>
             </Col>
@@ -204,23 +211,23 @@ const renderMessages =() =>{
   const returnObj = [];
   for (var i = 0; i < 7; i++) {
     const objRow = (
-      <>
+      <div key={faker.random.uuid()}>
       <div className="sender">
-        <p class="mb-1">{faker.lorem.paragraph()}</p>
-        <span>11:30 a.m.</span>
+        <p className="mb-1">{faker.lorem.paragraph()}</p>
+        <span style={{color:"gray"}}>11:30 a.m.</span>
       </div>
       <div className="reciever">
         <p>{faker.lorem.paragraph()}</p>
 
         <div style={{ textAlign: "right" }}>
-          <span>11:30 a.m.</span>
-          <i style={{color:"#ffbb00",cursor:"pointer"}} class="fas fa-check-double mr-4"></i>
+        <span style={{color:"gray"}}>11:30 a.m.</span>
+          <i style={{color:"#ffbb00",cursor:"pointer"}} className="fas fa-check-double mr-4"></i>
           <span>
-            {i===6?<i style={{color:"#d9d9d9",cursor:"pointer"}} class="fas fa-trash"></i>:null}
+            {i===6?<i style={{color:"#d9d9d9",cursor:"pointer"}} className="fas fa-trash"></i>:null}
           </span>
         </div>
       </div>
-      </>
+      </div>
     );
 
     returnObj.push(objRow);

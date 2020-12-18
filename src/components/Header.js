@@ -11,13 +11,13 @@ const Header = () => {
         </Navbar.Brand>
         <Nav  variant="pills" defaultActiveKey="link-1">
           <Nav.Item>
-          <Nav.Link eventKey="link-1">Jobs</Nav.Link>
+          <Nav.Link style={{fontFamily:`'Roboto', sans-serif`}} eventKey="link-1">Jobs</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-2">Get Social </Nav.Link>
+            <Nav.Link style={{fontFamily:`'Roboto', sans-serif`}} eventKey="link-2">Get Social </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-3">James Keem </Nav.Link>
+            <Nav.Link style={{fontFamily:`'Roboto', sans-serif`}} eventKey="link-3">James Keem </Nav.Link>
           </Nav.Item>
         </Nav>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
