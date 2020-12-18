@@ -9,7 +9,7 @@ const Header = () => {
         <Navbar.Brand href="#home">
           <Logo/>
         </Navbar.Brand>
-        <Nav  variant="pills" defaultActiveKey="link-1">
+        <Nav style={{marginLeft:"auto",marginRight:"1.5rem"}} variant="pills" defaultActiveKey="link-1">
           <Nav.Item>
           <Nav.Link style={{fontFamily:`'Roboto', sans-serif`}} eventKey="link-1">Jobs</Nav.Link>
           </Nav.Item>
@@ -20,6 +20,7 @@ const Header = () => {
             <Nav.Link style={{fontFamily:`'Roboto', sans-serif`}} eventKey="link-3">James Keem </Nav.Link>
           </Nav.Item>
         </Nav>
+        <h4 class="menu-text">Menu</h4>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">

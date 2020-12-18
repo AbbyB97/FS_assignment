@@ -23,6 +23,7 @@ const CardHeader = styled("div")`
   justify-content: space-between;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+  border-bottom: 0.5px solid #C4C4C4;
   .chatboxUserCol {
     display: flex;
     flex-direction: column;
@@ -82,6 +83,7 @@ const InputContainer = styled("div")`
   margin: 1rem;
   border: 2px solid #ffbb00;
   border-radius: 15px;
+  
 `;
 
 const Chatbox = () => {
@@ -153,6 +155,7 @@ const Chatbox = () => {
                 border: "none",
                 outline: "none",
                 width: "97.5%",
+                padding:"1rem"
               }}
               rows="5"
             ></textarea>
@@ -187,7 +190,6 @@ const Chatbox = () => {
             <Col md={{ span: 3, offset: 3 }} xl={{ span: 2, offset: 7 }} sm={1}>
               <button
                 style={{
-                  width: "5rem",
                   background: "#ffbb00",
                   width: "100%",
                   borderRadius: "0.85rem",

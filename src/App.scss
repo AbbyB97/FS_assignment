@@ -294,3 +294,17 @@ hr {
   background-color: white;
   color: gray;
 }
+
+.menu-text{
+  @include bp("phone") {
+    visibility: hidden;
+    display: none;
+
+  }
+  @include bp("tablet") {
+    visibility: visible;
+    display: block;
+  }
+
+
+}
