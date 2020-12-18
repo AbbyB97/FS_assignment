@@ -223,7 +223,7 @@ const renderMessages =() =>{
 
         <div style={{ textAlign: "right" }}>
         <span style={{color:"gray"}}>11:30 a.m.</span>
-          <i style={{color:"#ffbb00",cursor:"pointer"}} className="fas fa-check-double mr-4"></i>
+          <i style={{color:`${i===6? 'gray':'#ffbb00'}`,cursor:"pointer"}} className="fas fa-check-double mr-4"></i>
           <span>
             {i===6?<i style={{color:"#d9d9d9",cursor:"pointer"}} className="fas fa-trash"></i>:null}
           </span>
