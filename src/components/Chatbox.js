@@ -45,9 +45,11 @@ const MessagesContainer = styled("div")`
 `;
 const InputContainer = styled("div")`
   background: lightblue;
-  width: 100%;
-  padding-right: 20px;
-  height: 5rem;
+  width:95%;
+  margin:1rem;
+  border: 2px solid #ffbb00;
+  border-radius: 5px;
+  
 `;
 
 const Chatbox = () => {
@@ -115,7 +117,20 @@ const Chatbox = () => {
         <p>{faker.lorem.paragraphs()}</p>
         <p>{faker.lorem.paragraphs()}</p>
       </MessagesContainer>
-      <InputContainer>this is input box</InputContainer>
+      <InputContainer  >
+      <div class="container-fluid ">
+
+      <Row>
+      <textarea style={{resize:"none",border:"none",outline:"none",width:"100%"}}  rows="5"></textarea>
+      </Row>
+      <Row>
+        <Col md={2} xl={1}>sa1</Col>
+        <Col md={2} xl={1}>sa1</Col>
+        <Col md={2} xl={1}>sda</Col>
+        <Col md={{ span: 2, offset: 4 }} xl={{ span: 2, offset: 7 }} >sda1</Col>
+      </Row>
+      </div>
+      </InputContainer>
     </MainCard>
   );
 };
