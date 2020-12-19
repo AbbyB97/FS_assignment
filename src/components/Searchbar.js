@@ -88,7 +88,7 @@ const Searchbar = () => {
 
   return (
     <Row style={{ marginTop: "1rem" }}>
-      <Col md={8}>
+      <Col md={8}  xs={8}>
         <div
           style={{ width: "100%" }}
           className="ui field left icon input search-bar"
@@ -101,7 +101,7 @@ const Searchbar = () => {
           <i className="search icon med"></i>
         </div>
       </Col>
-      <Col md={4}>
+      <Col md={1}  xs={2}>
         <Main ref={ref}>
           <DropDownContainer>
             <DropDownHeader onClick={toggling}>
