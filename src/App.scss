@@ -320,7 +320,7 @@ hr {
     display: none;
 
   }
-  @include bp("laptop") {
+  @include bp("television") {
     visibility: visible;
     display: block;
  

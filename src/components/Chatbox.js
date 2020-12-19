@@ -127,16 +127,16 @@ const Chatbox = () => {
           >
             <div style={{display:"flex"}}>
 
-            <p style={{ color: "#ffbb00" ,margin:"0rem"}} className="pr-3 h4">
+            <p style={{ color: "#ffbb00" ,margin:"0rem"}} className="h4">
             <ItalicIcon/>
             </p>
-            <span class="contact-info-text">Contact Info</span>
+            <span class="contact-info-text ml-3">Contact Info</span>
             </div>
           </Button>
         </div>
-        <div className="my-auto">
+        <div className="my-auto ml-2">
           <i
-            style={{ cursor: "pointer", fontSize: "1.4rem" }}
+            style={{ cursor: "pointer", fontSize: "1.4rem"}}
             className="fas fa-ellipsis-v mr-1 pt-3"
           ></i>
         </div>
