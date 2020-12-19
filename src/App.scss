@@ -170,11 +170,15 @@ hr {
 //     width: 30vw;
 //   }
 // }
+
 .message-list-container {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
 
+  @include bp("phone") {
+    height: 300px;
+  }
 
   @include bp("tablet") {
     height: 64.5vw;
