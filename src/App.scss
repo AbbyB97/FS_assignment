@@ -174,7 +174,14 @@ hr {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 650px;
+
+
+  @include bp("tablet") {
+    height: 64.5vw;
+  }
+  @include bp("laptop") {
+    height: 650px;
+  }
   overflow: scroll;
   overflow-x: hidden;
   .card-style {
