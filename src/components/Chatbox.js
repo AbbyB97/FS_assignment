@@ -95,8 +95,8 @@ const Chatbox = () => {
             alt="avatar"
             className="ui avatar image"
             style={{
-              width: "80px",
-              height: "80px",
+              width: "58.25px",
+              height: "58.25px",
               position: "obsolute",
               top: "-2rem",
               marginLeft: "1rem",
