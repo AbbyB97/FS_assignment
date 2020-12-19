@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col,Modal ,Button} from "react-bootstrap";
 import { ReactComponent as OrganizationIco } from "../icons/organizations_svg.svg";
 import { ReactComponent as ProfileIco } from "../icons/profile.svg";
 import { ReactComponent as CarIco } from "../icons/car_svg.svg";
@@ -9,13 +9,42 @@ import { ReactComponent as RateIco } from "../icons/rate_svg.svg";
 import { ReactComponent as SubscriptionIco } from "../icons/subscription_svg.svg";
 import { ReactComponent as InboxSvg } from "../icons/inb_svg.svg";
 
+
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header style={{backgroundColor:"#3b3b3b"}} closeButton>
+        <Modal.Title  style={{color:"white"}} id="contained-modal-title-vcenter">
+          Under construction
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Comming soon!</h4>
+        <p>
+          This functionlity will be added soon.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
 const Sidebar = () => {
+  const [modalShow, setModalShow] = React.useState(false);
   const sideBarClick = (item) => {
     console.log(item);
     if (item === 4) {
       console.log("inbox show");
     } else {
-      alert("functionality will be added soon");
+      // alert("functionality will be added soon");
+      setModalShow(true)
     }
   };
 
@@ -108,6 +137,10 @@ const Sidebar = () => {
           </Col>
         </Row>
       </Col>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </Row>
   );
 };
