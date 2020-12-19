@@ -25,7 +25,7 @@ const DropDownHeader = styled("div")`
 const DropDownListContainer = styled("div")`
   position: absolute;
   z-index: 100;
-  width: 19rem;
+  width: 22rem;
   right: 70%;
   top: 20px;
   border-style: solid;
