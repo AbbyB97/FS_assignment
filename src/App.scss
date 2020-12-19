@@ -313,3 +313,16 @@ hr {
   color: white;
   outline: 0;
 }
+.contact-info-text{
+  @include bp("phone") {
+    visibility: hidden;
+    display: none;
+
+  }
+  @include bp("laptop") {
+    visibility: visible;
+    display: block;
+ 
+  }
+  
+}

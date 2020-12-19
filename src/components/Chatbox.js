@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button,Container } from "react-bootstrap";
 
 import { ReactComponent as ItalicIcon } from "../icons/italic_i_svg.svg";
 
@@ -125,10 +125,13 @@ const Chatbox = () => {
               backgroundColor: "#6b6565",
             }}
           >
-            <span style={{ color: "#ffbb00" ,margin:"0rem"}} className="pr-3 h4">
+            <div style={{display:"flex"}}>
+
+            <p style={{ color: "#ffbb00" ,margin:"0rem"}} className="pr-3 h4">
             <ItalicIcon/>
-            </span>
-            Contact Info
+            </p>
+            <span class="contact-info-text">Contact Info</span>
+            </div>
           </Button>
         </div>
         <div className="my-auto">
@@ -160,6 +163,7 @@ const Chatbox = () => {
               rows="5"
             ></textarea>
           </Row>
+          <Container>
           <Row
             style={{
               background: "#f9f8f8",
@@ -169,29 +173,29 @@ const Chatbox = () => {
               marginTop: "5px",
             }}
           >
-            <Col md={2} xl={1} sm={1} className="my-auto">
+            <Col style={{backgroundColor:"purple"}} md={2} xl={1} sm={1} xs={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
                 className="fas fa-paperclip fa-lg"
               ></i>
             </Col>
-            <Col md={2} xl={1} sm={1} className="my-auto">
+            <Col style={{backgroundColor:"pink"}} md={2} xl={1} sm={1} xs={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
                 className="far fa-smile fa-lg"
               ></i>
             </Col>
-            <Col md={2} xl={1} sm={1} className="my-auto">
+            <Col style={{backgroundColor:"orange"}} md={2} xl={1} sm={1} xs={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
                 className="fas fa-microphone fa-lg"
               ></i>
             </Col>
-            <Col md={{ span: 3, offset: 3 }} xl={{ span: 2, offset: 7 }} sm={1}>
+            <Col style={{backgroundColor:"red"}} md={{ span: 2, offset: 3 }} xl={{ span: 1, offset: 8 }} sm={{span: 1, offset: 7}} xs={{span: 1, offset: 7}}>
               <button
                 style={{
                   background: "#ffbb00",
-                  width: "100%",
+                  width: "",
                   borderRadius: "0.85rem",
                 }}
                 className="ui icon button"
@@ -203,6 +207,7 @@ const Chatbox = () => {
               </button>
             </Col>
           </Row>
+          </Container>
         </div>
       </InputContainer>
     </MainCard>
