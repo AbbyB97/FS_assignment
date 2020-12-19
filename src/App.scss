@@ -177,7 +177,7 @@ hr {
   flex-direction: column;
 
   @include bp("phone") {
-    height: 300px;
+    height: 400px;
   }
 
   @include bp("tablet") {
