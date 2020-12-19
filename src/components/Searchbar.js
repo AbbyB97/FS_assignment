@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Row, Col, DropdownButton, Dropdown, Button } from "react-bootstrap";
 import { ReactComponent as FilterIco } from "../icons/filter_svg.svg";
 import styled from "styled-components";
+import useOutsideClick from "../components/widgets/useOutsideClick";
 
 const Main = styled("div")`
   font-family: sans-serif;
@@ -65,14 +66,24 @@ const options = ["Mangoes", "Apples", "Oranges"];
 
 const Searchbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedStatus, setSelectedStatus] = useState(null);
 
-  const toggling = () => setIsOpen(!isOpen);
+  const ref = useRef();
+
+  useOutsideClick(ref, () => {
+    console.log("You clicked outside");
+  });
+
+  const toggling = () => {
+    console.log("toggling");
+    setIsOpen(!isOpen);
+    setSelectedTime(null);
+  };
 
   const onOptionClicked = (value) => () => {
-    setSelectedOption(value);
-    setIsOpen(false);
-    console.log(selectedOption);
+    setSelectedTime(value);
+    console.log(selectedTime);
   };
 
   return (
@@ -91,10 +102,10 @@ const Searchbar = () => {
         </div>
       </Col>
       <Col md={4}>
-        <Main>
+        <Main ref={ref}>
           <DropDownContainer>
             <DropDownHeader onClick={toggling}>
-              <FilterIco style={{cursor:"pointer"}} />
+              <FilterIco style={{ cursor: "pointer" }} />
             </DropDownHeader>
             {isOpen && (
               <DropDownListContainer>
@@ -111,16 +122,20 @@ const Searchbar = () => {
                     </ListItem>
                   ))} */}
                   <DropdownButton
-                    style={{ marginLeft: "4.5rem",marginTop:"3rem" }}
+                    style={{ marginLeft: "4.5rem", marginTop: "3rem" }}
                     menuAlign="right"
-                    title="Dropdown right"
+                    title={selectedStatus===null?'Message Statuses':selectedStatus}
                     id="dropdown-menu-align-right"
                   >
-                    <Dropdown.Item eventKey="1">Read messages</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Unread messages</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Opened but not responded</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Ongoing discussion</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Ended discussion</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>setSelectedStatus('Read messages')} eventKey="1">Read messages</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>setSelectedStatus('Unread messages')} eventKey="2">Unread messages</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>setSelectedStatus('Opened but not responded')} eventKey="3">
+                      Opened but not responded
+                    </Dropdown.Item>
+                    <Dropdown.Item onClick={()=>setSelectedStatus('Ongoing discussion')} eventKey="4">
+                      Ongoing discussion
+                    </Dropdown.Item>
+                    <Dropdown.Item onClick={()=>setSelectedStatus('Ended discussion')} eventKey="5">Ended discussion</Dropdown.Item>
                     {/* <Dropdown.Item eventKey="3">
                       Something else here
                     </Dropdown.Item>
@@ -129,17 +144,51 @@ const Searchbar = () => {
                   </DropdownButton>
 
                   <DropdownButton
-                    style={{ marginLeft: "4.5rem" ,marginTop:"3rem"}}
+                    style={{ marginLeft: "4.5rem", marginTop: "3rem" }}
                     menuAlign="right"
-                    title="Dropdown right"
+                    title={
+                      selectedTime === null
+                        ? `Time of messages`
+                        : selectedTime
+                    }
                     id="dropdown-menu-align-right"
                   >
-                    <Dropdown.Item eventKey="1">Last hour</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">12 hrs ago</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">Today</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">This week</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">This month</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">This year</Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedTime("Last hour")}
+                      eventKey="1"
+                    >
+                      Last hour
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedTime("12 hrs ago")}
+                      eventKey="2"
+                    >
+                      12 hrs ago
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedTime("Today")}
+                      eventKey="3"
+                    >
+                      Today
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedTime("This week")}
+                      eventKey="4"
+                    >
+                      This week
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedTime("This month")}
+                      eventKey="5"
+                    >
+                      This month
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      onClick={() => setSelectedTime("This year")}
+                      eventKey="6"
+                    >
+                      This year
+                    </Dropdown.Item>
                     {/* <Dropdown.Item eventKey="3">
                       Something else here
                     </Dropdown.Item>
@@ -148,6 +197,7 @@ const Searchbar = () => {
                   </DropdownButton>
                   <Button
                     variant="warning"
+                    onClick={toggling}
                     style={{
                       color: "white",
                       fontSize: "1.3rem",

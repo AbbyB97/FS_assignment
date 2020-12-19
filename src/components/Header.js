@@ -20,7 +20,7 @@ const Header = () => {
             <Nav.Link style={{fontFamily:`'Roboto', sans-serif`}} eventKey="link-3">James Keem </Nav.Link>
           </Nav.Item>
         </Nav>
-        <h4 class="menu-text">Menu</h4>
+        <h4 className="menu-text">Menu</h4>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
