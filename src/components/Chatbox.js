@@ -158,44 +158,45 @@ const Chatbox = () => {
                 border: "none",
                 outline: "none",
                 width: "97.5%",
-                padding:"1rem"
+                padding:"1rem",
               }}
               rows="5"
             ></textarea>
           </Row>
-          <Container>
+          <Container style={{padding:"0"}}>
           <Row
             style={{
-              background: "#f9f8f8",
+              backgroundColor :"#f9f8f8",
               borderBottomLeftRadius: "15px",
               borderBottomRightRadius: "15px",
-              marginBottom: "5px",
               marginTop: "5px",
+              marginBottom:"5px"
+
             }}
           >
-            <Col style={{backgroundColor:"purple"}} md={2} xl={1} sm={1} xs={1} className="my-auto">
+            <Col  md={2} xl={1} sm={1} xs={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
                 className="fas fa-paperclip fa-lg"
               ></i>
             </Col>
-            <Col style={{backgroundColor:"pink"}} md={2} xl={1} sm={1} xs={1} className="my-auto">
+            <Col  md={2} xl={1} sm={1} xs={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
                 className="far fa-smile fa-lg"
               ></i>
             </Col>
-            <Col style={{backgroundColor:"orange"}} md={2} xl={1} sm={1} xs={1} className="my-auto">
+            <Col  md={2} xl={1} sm={1} xs={1} className="my-auto">
               <i
                 style={{ color: "gray", cursor: "pointer" }}
                 className="fas fa-microphone fa-lg"
               ></i>
             </Col>
-            <Col style={{backgroundColor:"red"}} md={{ span: 2, offset: 3 }} xl={{ span: 1, offset: 8 }} sm={{span: 1, offset: 7}} xs={{span: 1, offset: 7}}>
+            <Col  md={{ span: 3, offset: 3 }} xl={{ span: 2, offset: 7 }} sm={{span: 2, offset: 7 }} xs={{span: 3, offset: 6}}>
               <button
                 style={{
+                  width:"100%",
                   background: "#ffbb00",
-                  width: "",
                   borderRadius: "0.85rem",
                 }}
                 className="ui icon button"

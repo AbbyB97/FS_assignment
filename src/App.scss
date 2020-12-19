@@ -213,7 +213,8 @@ hr {
     }
     .message-column {
       display: flex;
-
+      margin-left: 1rem;
+      margin-right: 1rem;
       @include bp("tablet") {
         width: 100%;
       }
